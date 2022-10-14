@@ -20,3 +20,4 @@ vim.o.listchars = "space:·"
 
 --always showtableline
 vim.o.showtabline = 2
+

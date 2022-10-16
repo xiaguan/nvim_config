@@ -8,11 +8,18 @@ return require('packer').startup(function()
     }
     -- zephyr-nvim theme
     use 'glepnir/zephyr-nvim'
-    -- nvim-tree (新增)
+    -- nvim-tree : the file tree on the leftside
     use {
         'kyazdani42/nvim-tree.lua',
         requires = 'kyazdani42/nvim-web-devicons'
     }
-    -- using packer.nvim
+    -- bufferline : tabs you know
     use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+    -- highligh nvim-treesitter
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+    }
+    -- coc-nvim 
+    use {'neoclide/coc.nvim', branch = 'release'}
 end)

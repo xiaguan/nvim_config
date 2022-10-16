@@ -24,4 +24,6 @@ map("n","sc",":close<CR>",opt)
 -- close all other windows
 map("n","so",":only<CR>",opt)
 
-
+-- bufferline 左右切换
+map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
+map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)

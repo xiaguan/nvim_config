@@ -11,3 +11,5 @@ lua require("config/nvim-treesitter")
 lua require("config/coc-nvim")
 " schema gruvbox zephyr
 colorscheme zephyr
+
+let g:coc_global_extensions = ['coc-clangd','coc-cmake','coc-python']

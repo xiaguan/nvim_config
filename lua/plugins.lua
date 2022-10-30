@@ -8,7 +8,7 @@ return require('packer').startup(function()
     }
     -- zephyr-nvim theme
     use 'glepnir/zephyr-nvim'
-    -- nvim-tree : the file tree on the leftside
+    -- nvim-tree : the file  tree on the leftside
     use {
         'kyazdani42/nvim-tree.lua',
         requires = 'kyazdani42/nvim-web-devicons'
@@ -26,5 +26,12 @@ return require('packer').startup(function()
          'nvim-telescope/telescope.nvim', tag = '0.1.0',
        requires = { {'nvim-lua/plenary.nvim'} 
        }
-}
+	     }
+     use {
+ 	 "nvim-lualine/lualine.nvim",
+ 	 requires = {"kyazdani42/nvim-web-devicons", opt = true}
+ 	 }
+	  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("toggleterm").setup()
+    end}
 end)
